@@ -6,7 +6,7 @@ import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 
-@FeignClient("merchant")
+@FeignClient("http://bookstore-merchant.herokuapp.com/")
 public interface MerchantClient {
     @PostMapping("/getQuantity")
     public String getQuantity(@RequestBody QuantityDTO quantityDTO);
